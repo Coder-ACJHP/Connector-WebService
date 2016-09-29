@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://coder.me.com/" xmlns:tns="http://coder.me.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="insertUserData" nillable="true" type="tns:insertUserData"/>
+
+  <xs:element name="insertUserDataResponse" nillable="true" type="tns:insertUserDataResponse"/>
+
+  <xs:complexType name="insertUserData">
+    <xs:sequence>
+      <xs:element name="date" type="xs:string" minOccurs="0"/>
+      <xs:element name="id" type="xs:int"/>
+      <xs:element name="latitude" type="xs:double"/>
+      <xs:element name="longitude" type="xs:double"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="time" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="insertUserDataResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
